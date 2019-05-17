@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using Tick42;
+using Tick42.StickyWindows;
 
 namespace ClientPortfolio
 {
@@ -27,6 +28,10 @@ namespace ClientPortfolio
             this.glue = new Glue42();
             this.glue.Initialize(applicationName);
             this.companyService = this.glue.Interop.CreateServiceProxy<ICompanyService>();
+
+            // Initialize Window Stickiness and read from config:
+            var swOptions = glue.StickyWindows?.GetStartupOptions() ?? new SwOptions();
+            glue.StickyWindows?.RegisterWindow(this, swOptions);
         }
 
         private void LbCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
