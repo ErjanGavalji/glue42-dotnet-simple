@@ -3,7 +3,7 @@ using System;
 
 namespace InteropLib
 {
-    [ServiceContract(MethodNamespace = "FidelityDemo.")]
+    [ServiceContract(MethodNamespace = "DotNetDemo.")]
     public interface ICompanyService : IDisposable
     {
         [ServiceOperation(AsyncIfPossible = true, ExceptionSafe = true)]
