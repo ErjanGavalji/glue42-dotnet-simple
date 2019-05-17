@@ -1,0 +1,21 @@
+﻿<Window x:Class="CompanyManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CompanyManager"
+        mc:Ignorable="d"
+        Title="Company Manager" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="691*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="lblCompanies" Content="Companies" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Height="32" Width="136" />
+        <ListBox Name="lbCompanies" HorizontalAlignment="Left" Height="299" Margin="34,71,0,0" VerticalAlignment="Top" Width="170" DisplayMemberPath="Code" SelectionChanged="LbCompanies_SelectionChanged" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="299" Margin="303,71,0,0" VerticalAlignment="Top" Width="344"/>
+        <Label Name="lblSelectedCompanyName" Content="" HorizontalAlignment="Left" Margin="303,71,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
