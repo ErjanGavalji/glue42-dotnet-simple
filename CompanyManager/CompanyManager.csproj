@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Glue42">
+      <HintPath>..\lib\Glue42.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -89,6 +92,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="glue42-company-manager-cfg.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +106,10 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{868466c2-bdb6-4c81-b417-29ac0e82aa8e}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InteropLib\InteropLib.csproj">
+      <Project>{7a147aa6-71e9-4d68-9735-6b596943552e}</Project>
+      <Name>InteropLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

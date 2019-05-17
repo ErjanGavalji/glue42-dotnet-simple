@@ -10,7 +10,7 @@
         <ListBox x:Name="lbCustomers" HorizontalAlignment="Left" Height="252" Margin="48,89,0,0" VerticalAlignment="Top" Width="164" DisplayMemberPath="Name" SelectionChanged="LbCustomers_SelectionChanged">
         </ListBox>
         <Label x:Name="lblCustomers" Content="Customers" HorizontalAlignment="Left" Margin="48,58,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbPortfolio" HorizontalAlignment="Left" Height="252" Margin="327,89,0,0" VerticalAlignment="Top" Width="164" DisplayMemberPath="Code" />
+        <ListBox x:Name="lbPortfolio" HorizontalAlignment="Left" Height="252" Margin="327,89,0,0" VerticalAlignment="Top" Width="164" DisplayMemberPath="Code" SelectionChanged="LbPortfolio_SelectionChanged" />
         <Label x:Name="lblPortfolio" Content="Portfolio" HorizontalAlignment="Left" Margin="327,58,0,0" VerticalAlignment="Top"/>
 
     </Grid>
