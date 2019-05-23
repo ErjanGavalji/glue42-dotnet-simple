@@ -13,7 +13,6 @@
         },
         (args) => {
           if (window.glueWindow) {
-            //window.glue.windows.findById(window.glueWindowId).navigate(args.url);
               window.glueWindow.navigate(args.url);
           } else {
               glue.windows.open("myWin", args.url, {}, (glueWindow) => {
