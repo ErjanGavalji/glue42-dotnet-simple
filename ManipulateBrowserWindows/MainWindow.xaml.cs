@@ -8,7 +8,7 @@ namespace ManipulateBrowserWindows
     public partial class MainWindow : Window
     {
         private Glue42 glue;
-        private IWindowMgmtInterop windowMgmtSvc;
+        private IDemoWindowOpening demoWindowOpenerSvc;
         private int windowId = -1;
 
         public MainWindow()
@@ -23,7 +23,7 @@ namespace ManipulateBrowserWindows
             var swOptions = glue.StickyWindows?.GetStartupOptions() ?? new SwOptions();
             glue.StickyWindows?.RegisterWindow(this, swOptions);
 
-            this.windowMgmtSvc = this.glue.Interop.CreateServiceProxy<IWindowMgmtInterop>();
+            this.demoWindowOpenerSvc = this.glue.Interop.CreateServiceProxy<IDemoWindowOpening>();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,14 +38,7 @@ namespace ManipulateBrowserWindows
 
         private void loadUrl(string url)
         {
-            if (this.windowId == -1)
-            {
-                this.windowId = this.windowMgmtSvc.Create("myWindow", url);
-            } else
-            {
-                //TODO: Implement the navigation!
-                this.windowMgmtSvc.Execute("navigate", this.windowId.ToString(), string.Format("{{\"url\":\"{0}\"}}", url));
-            }
+            this.demoWindowOpenerSvc.OpenReusableWindow(url);
         }
     }
 }

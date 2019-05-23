@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Window launcher</title>
+    <script type="text/javascript" src="./lib/tick42-glue.min.js"></script>
+    <script>
+      Glue().then((glue) => {
+        window.glue = glue;
+        window.glueWindow = null;
+        glue.agm.register({
+          name: "T42.Demo.OpenReusableWindow",
+          accepts: "string url",
+          returns: "void"
+        },
+        (args) => {
+          if (window.glueWindow) {
+            //window.glue.windows.findById(window.glueWindowId).navigate(args.url);
+              window.glueWindow.navigate(args.url);
+          } else {
+              glue.windows.open("myWin", args.url, {}, (glueWindow) => {
+                  window.glueWindow = glueWindow;
+              });
+          }
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
