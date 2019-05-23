@@ -11,6 +11,9 @@ namespace ManipulateBrowserWindows
     public interface IWindowMgmtInterop : IDisposable
     {
         [ServiceOperation(AsyncIfPossible = true, ExceptionSafe = true)]
-        void Create(string name, string url);
+        int Create(string name, string url);
+
+        [ServiceOperation(AsyncIfPossible = true, ExceptionSafe = true)]
+        object Execute(string command, string windowId, Object options);
     }
 }

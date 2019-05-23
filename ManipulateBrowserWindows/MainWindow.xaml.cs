@@ -9,6 +9,7 @@ namespace ManipulateBrowserWindows
     {
         private Glue42 glue;
         private IWindowMgmtInterop windowMgmtSvc;
+        private int windowId = -1;
 
         public MainWindow()
         {
@@ -32,12 +33,19 @@ namespace ManipulateBrowserWindows
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            this.loadUrl("https://docs.glue42.com");
         }
 
         private void loadUrl(string url)
         {
-            this.windowMgmtSvc.Create("myWindow", url);
+            if (this.windowId == -1)
+            {
+                this.windowId = this.windowMgmtSvc.Create("myWindow", url);
+            } else
+            {
+                //TODO: Implement the navigation!
+                this.windowMgmtSvc.Execute("navigate", this.windowId.ToString(), string.Format("{{\"url\":\"{0}\"}}", url));
+            }
         }
     }
 }
