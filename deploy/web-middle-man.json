@@ -1,0 +1,14 @@
+{
+    "name":"WebMiddleMan",
+    "title":"Window Opener Web Middle Man",
+    "caption": "A middle man JS application to reuse the same window",
+    "type": "window",
+    "hidden": false,
+    "autoStart": true,
+    "details":{
+         "url":"file:///%GDDIR%\\..\\Demos\\WebMiddleMan\\index.html",
+         "mode": "flat",
+         "width": 400,
+         "height": 400
+    }
+}

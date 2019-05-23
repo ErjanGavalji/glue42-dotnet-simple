@@ -1,0 +1,15 @@
+[
+   {
+        "title": "Reusable Window Opener",
+        "type": "exe",
+        "name": "reusable-window-opener",
+        "hidden": false,
+    "details": {
+      "path": "%GDDIR%/../Demos/ReuseBrowserWindows/",
+      "command": "ManipulateBrowserWindows.exe",
+      "parameters": "",
+      "width": 1000,
+      "height": 400
+    }
+   }
+]

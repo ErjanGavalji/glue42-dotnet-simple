@@ -22,6 +22,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{80227C4D-D11
 		WebMiddleMan\lib\tick42-glue.min.js = WebMiddleMan\lib\tick42-glue.min.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{89739F01-4F0D-49D9-8E9E-CBC6DF2A745C}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\deploy.bat = deploy\deploy.bat
+		deploy\web-middle-man.json = deploy\web-middle-man.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
