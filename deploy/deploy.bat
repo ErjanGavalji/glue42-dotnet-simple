@@ -11,3 +11,4 @@ rd /S /Q %localappdata%\Tick42\Demos\WebMiddleMan
 mkdir %localappdata%\Tick42\Demos\WebMiddleMan
 xcopy ..\WebMiddleMan\* %localappdata%\Tick42\Demos\WebMiddleMan /E /I /Y /R
 
+@pause
