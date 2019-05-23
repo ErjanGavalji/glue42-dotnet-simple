@@ -25,7 +25,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{89739F01-4F0D-49D9-8E9E-CBC6DF2A745C}"
 	ProjectSection(SolutionItems) = preProject
 		deploy\deploy.bat = deploy\deploy.bat
+		deploy\reusable-window-opener.json = deploy\reusable-window-opener.json
 		deploy\web-middle-man.json = deploy\web-middle-man.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5605A352-DF5A-4D49-8C53-1084E115A45C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
