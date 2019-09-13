@@ -1,13 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Glue42">
-      <HintPath>..\lib\Glue42.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Glue42" Version="2018.2084.0" />
   </ItemGroup>
 
 </Project>
