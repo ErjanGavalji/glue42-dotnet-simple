@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using Tick42;
-using Tick42.StickyWindows;
+using Tick42.Windows;
 
 namespace CompanyManager
 {
@@ -57,8 +57,8 @@ namespace CompanyManager
             glue.Interop.RegisterService<ICompanyService>(companyService);
 
             // Initialize Window Stickiness and read from config:
-            var swOptions = glue.StickyWindows?.GetStartupOptions() ?? new SwOptions();
-            glue.StickyWindows?.RegisterWindow(this, swOptions);
+            var swOptions = glue.GlueWindows?.GetStartupOptions() ?? new GlueWindowOptions();
+            glue.GlueWindows?.RegisterWindow(this, swOptions);
         }
 
         private void handleCompanyCodeChange(string code)
