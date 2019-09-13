@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteropLib", "InteropLib\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyManager_WF", "CompanyManager_WF\CompanyManager_WF.csproj", "{D48BF510-1F5B-4973-8AAD-07FA5EDB6560}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteropLib", "InteropLib\InteropLib.csproj", "{7A147AA6-71E9-4D68-9735-6B596943552E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

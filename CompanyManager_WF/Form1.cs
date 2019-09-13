@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Data;
 using InteropLib;
 using Tick42;
-using Tick42.StickyWindows;
+using Tick42.Windows;
 
 namespace CompanyManager_WF
 {
@@ -31,8 +31,8 @@ namespace CompanyManager_WF
             glue.Interop.RegisterService<ICompanyService>(companyService);
 
             // Initialize Window Stickiness and read from config:
-            var swOptions = glue.StickyWindows?.GetStartupOptions() ?? new SwOptions();
-            glue.StickyWindows?.RegisterWindow(this.Handle, swOptions);
+            var swOptions = glue.GlueWindows?.GetStartupOptions() ?? new GlueWindowOptions();
+            glue.GlueWindows?.RegisterWindow(this.Handle, swOptions);
         }
 
         private void Form1_Load(object sender, System.EventArgs e)
